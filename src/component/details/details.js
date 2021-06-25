@@ -24,7 +24,7 @@ const Details = props => {
                     <Grid item key={i}>
                         <Card>
                             <CardActions>
-                                <img src={product.image} style={{ width: '25rem', height: '20rem' }} />
+                                <img alt="ggg" src={product.image} style={{ width: '25rem', height: '20rem' }} />
                                 <CardHeader title={product.title} />
                                 <CardContent>
                                     <Typography component="price">{product.description}</Typography>

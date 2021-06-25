@@ -68,11 +68,7 @@ const useStyles = makeStyles((theme) => ({
 
 const ProductViewer = (props) => {
   const classes = useStyles();
-  const [value, setValue] = React.useState(0);
 
-  const handleChange = (event, newValue) => {
-    setValue(newValue);
-  }
 
   return (
 
@@ -80,7 +76,7 @@ const ProductViewer = (props) => {
       <div className={classes.root}>
         <div className={classes.demo1}>
           <Typography variant="h6" component="h6" style={{ textAlign: "center", marginTop: "20px" }}>All you want in one place</Typography>
-          <AntTabs onChange={handleChange}>
+          <AntTabs>
             <AntTab label="Food" onClick={() => props.active('Food', 'Eat whatever you want, and if someone tries to lecture you about your weight, eat them too!')} />
           </AntTabs>
           <Typography className={classes.padding} />

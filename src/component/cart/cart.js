@@ -3,13 +3,12 @@ import { connect } from 'react-redux';
 import { removeFromCart, addToCart, } from '../../store/cart.js';
 import { Typography, Card, CardHeader, CardContent, CardActions, IconButton } from '@material-ui/core';
 import DeleteIcon from '@material-ui/icons/Delete';
-import { useSelector } from 'react-redux';
 
 
 
 const Cart = props => {
     // const cart = useSelector(state => state.cart.cart);
-    { props.products.total = 0 }
+     props.products.total = 0
 
 
     return (
@@ -21,7 +20,7 @@ const Cart = props => {
                             <>
                                 <Card>
                                     <CardActions>
-                                        <img src={product.image} style={{ width: '10rem', height: '10rem' }} />
+                                        <img alt ='gggg' src={product.image} style={{ width: '10rem', height: '10rem' }} />
                                         <CardHeader title={product.title} />
                                         <CardContent>
                                             <Typography component="description">{product.description}</Typography>

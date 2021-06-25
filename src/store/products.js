@@ -62,7 +62,7 @@ export default function productReducer(state = initialState, action) {
   switch (type) {
     case 'ACTIVE':
       const products = getProducts(payload.category);
-        let p1 = products.map(product => {
+        products.map(product => {
           product.Count = product.quantity;
           return product;
       })
@@ -75,12 +75,12 @@ export default function productReducer(state = initialState, action) {
 }
 
 export function getProducts(category) {
-  const products = initialState.products;
+  let products = initialState.products;
 
-  const products1 = products.filter(element => {
+  const products1 = products.filter(element=>{
     if (element.category === category) {
       return true;
     }
-  })
+  });
   return products1;
 }
