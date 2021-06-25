@@ -20,39 +20,6 @@ const AntTabs = withStyles({
   },
 })(Tabs);
 
-const AntTab = withStyles((theme) => ({
-  root: {
-    textTransform: 'none',
-    minWidth: 72,
-    fontWeight: theme.typography.fontWeightRegular,
-    marginRight: theme.spacing(1),
-    fontFamily: [
-      '-apple-system',
-      'BlinkMacSystemFont',
-      '"Segoe UI"',
-      'Roboto',
-      '"Helvetica Neue"',
-      'Arial',
-      'sans-serif',
-      '"Apple Color Emoji"',
-      '"Segoe UI Emoji"',
-      '"Segoe UI Symbol"',
-    ].join(','),
-    '&:hover': {
-      color: '#40a9ff',
-      opacity: 1,
-    },
-    '&$selected': {
-      color: '#1890ff',
-      fontWeight: theme.typography.fontWeightMedium,
-    },
-    '&:focus': {
-      color: '#40a9ff',
-    },
-  },
-  selected: {},
-}))((props) => <Tab disableRipple {...props} />);
-
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
@@ -77,9 +44,7 @@ const ProductViewer = (props) => {
         <div className={classes.demo1}>
           <Typography variant="h6" component="h6" style={{ textAlign: "center", marginTop: "20px" }}>All you want in one place</Typography>
           <AntTabs>
-            <AntTab label="Food" onClick={() => props.active('Food', 'Eat whatever you want, and if someone tries to lecture you about your weight, eat them too!')} />
           </AntTabs>
-          <Typography className={classes.padding} />
         </div>
       </div>
       <h2 style={{ textAlign: "center", fontSize: '3rem' }}>{props.categories.activeCategory}</h2>
@@ -93,10 +58,10 @@ const ProductViewer = (props) => {
                 <CardHeader title={product.title} />
                 <CardContent>
                   <Typography component="inStock">  {product.quantity > 0
-                    ? `In stock, ${product.quantity} items` : 'Out of Stock'}</Typography>
+                    ? `Quantity, ${product.quantity} items` : 'Out of Stock'}</Typography>
 
                   <br />
-                  <Typography component="price"> $ {product.price}</Typography>
+                  <Typography component="price">Price:  ${product.price}</Typography>
                 </CardContent>
                 <CardActions>
                   <IconButton style={{ fontSize: '1.2rem', color: '#586a89' }} onClick={() => props.addToCart(product)} disabled={product.quantity > 0 ? false : true}>Add to cart</IconButton>

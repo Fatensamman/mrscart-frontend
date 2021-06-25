@@ -22,7 +22,7 @@ export default function categoryReducer(state = initialState, action) {
     }
 }
 
-export function active (category, description) {
+export function active(category, description) {
     return {
         type: 'ACTIVE',
         payload: {
@@ -32,7 +32,7 @@ export function active (category, description) {
     };
 }
 
-export function inactive (){
+export function inactive() {
     return {
         type: 'INACTIVE'
     };

@@ -8,7 +8,7 @@ import DeleteIcon from '@material-ui/icons/Delete';
 
 const Cart = props => {
     // const cart = useSelector(state => state.cart.cart);
-     props.products.total = 0
+    props.products.total = 0
 
 
     return (
@@ -20,7 +20,7 @@ const Cart = props => {
                             <>
                                 <Card>
                                     <CardActions>
-                                        <img alt ='gggg' src={product.image} style={{ width: '10rem', height: '10rem' }} />
+                                        <img alt='gggg' src={product.image} style={{ width: '10rem', height: '10rem' }} />
                                         <CardHeader title={product.title} />
                                         <CardContent>
                                             <Typography component="description">{product.description}</Typography>
