@@ -1,3 +1,20 @@
+### MrsCart
+
+its a store application
+
+## Author: Faten Samman
+
+## Version: 1.0.0
+
+## [Deployed Site](https://new-mrscart.herokuapp.com/)
+
+## Setup
+
+1. Clone the repository
+2. run this line of code `npm i` to install all dependencies
+3. run `npm start`
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
