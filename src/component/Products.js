@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Typography, Grid, Card, CardHeader, CardContent, CardActions, IconButton, Tabs, Tab } from '@material-ui/core';
+import { Typography, Grid, Card, CardHeader, CardContent, CardActions, IconButton, Tabs } from '@material-ui/core';
 import { connect } from 'react-redux';
 import { inactive, active } from '../store/categories';
 import { getProducts } from '../store/products';
@@ -54,7 +54,7 @@ const ProductViewer = (props) => {
           return (
             <Grid item key={index}>
               <Card style={{ width: '25rem', height: '35rem' }}>
-                <img src={product.image} style={{ width: '25rem', height: '20rem' }} />
+                <img src={product.image} style={{ width: '25rem', height: '20rem' }} alt="img"/>
                 <CardHeader title={product.title} />
                 <CardContent>
                   <Typography component="inStock">  {product.quantity > 0

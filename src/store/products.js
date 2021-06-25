@@ -152,10 +152,11 @@ export default function productReducer(state = initialState, action) {
 export function getProducts(category) {
   let products = initialState.products;
 
-  const products1 = products.filter(element => {
+  const products1 = products.filter(element =>{
     if (element.category === category) {
       return true;
     }
+    else return false
   });
   return products1;
 }
