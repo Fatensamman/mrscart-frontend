@@ -6,7 +6,7 @@ its a store application
 
 ## Version: 1.0.0
 
-## [Deployed Site](https://stoic-mclean-5190d6.netlify.app/cart)
+## https://stoic-mclean-5190d6.netlify.app/
 
 ## Setup
 
